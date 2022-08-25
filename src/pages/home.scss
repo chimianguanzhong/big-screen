@@ -1,0 +1,301 @@
+.home {
+    display: flex;
+    background: #010310;
+    color: white;
+    flex-direction: column;
+    font-size: calc(16 / 2420 * 100rem);
+
+    > header {
+        height: calc(99 / 2420 * 100rem);
+        width: calc(2420 / 2420 * 100rem);
+        background-size: cover;
+        margin: 0 auto;
+    }
+
+    > main {
+        width: calc(2420 / 2420 * 100rem);
+        margin: 0 auto;
+        padding-top: calc(30 / 2420 * 100rem);
+        flex: 1;
+        display: grid;
+        grid-template:
+            "box1 box2 box4 box5" 755fr
+            "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+        grid-column-gap: calc(28 / 2420 * 100rem);
+        grid-row-gap: calc(28 / 2420 * 100rem);
+
+        > section {
+            text-align: center;
+        }
+
+        .bordered {
+            border: 1px solid #0764bc;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
+            background: #0f113a;
+    
+            &::before {
+                pointer-events: none;
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                border-radius: 4px;
+                box-shadow: 17px 0 0 -16px #0e325f,
+                    -17px 0 0 -16px #0e325f,
+                    0 17px 0 -16px #0e325f,
+                    0 -17px 0 -16px #0e325f,
+                    9px 0 0 -8px #0d4483,
+                    -9px 0 0 -8px #0d4483,
+                    0 9px 0 -8px #0d4483,
+                    0 -9px 0 -8px #0d4483, ;
+            }
+        }
+
+        >.section1 {
+            grid-area: box1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        >.section2 {
+            grid-area: box2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        >.section3 {
+            grid-area: box3;
+        }
+
+        >.section4 {
+            grid-area: box4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        >.section5 {
+            grid-area: box5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            >.row1 {
+                height: calc(317 / 2420 * 100rem);
+            }
+    
+            >.row2 {
+                height: calc(317 / 2420 * 100rem);
+            }
+    
+            >.row3 {
+                height: calc(455 / 2420 * 100rem);
+            }
+        }
+
+        .管辖统计,
+        .破获排名,
+        .发案趋势,
+        .案发时段,
+        .战果,
+        .籍贯,
+        .年龄段,
+        .案发类型,
+        .案发街道,
+        .作案手段 {
+            height: calc(315 / 2420 * 100rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                flex-shrink: 0;
+                border: 1px solid #0a5299;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                font-size: calc(22 / 2420 * 100rem);
+                line-height: calc(24 / 2420 * 100rem);
+                padding: calc(10 / 2420 * 100rem) calc(28 / 2420 * 100rem);
+                text-shadow: 0 0 calc(3 / 2420 * 100rem) white;
+            }
+
+            .charts {
+                width: 100%;
+                flex: 1;
+                display: flex;
+            }
+
+            .chart {
+                flex: 1;
+                width: 100%;
+            }
+        }
+
+        .发案趋势,
+        .案发时段 {
+            height: calc(363 / 2420 * 100rem);
+        }
+
+        .chart11,
+        .chart12 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            >.chart {
+                display: flex;
+
+                >.main {
+                    flex: 1
+                }
+            }
+        }
+
+        .年龄段 {
+            display: flex;
+            flex-direction: column;
+            height: calc(363 / 2420 * 100rem);
+    
+            >.charts {
+                padding: calc(30 / 2420 * 100rem);
+            }
+    
+            &-图1,
+            &-图2,
+            &-图3 {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            &-图1,
+            &-图2 {
+                .legend {
+                    .male {
+                        background: #33a4fa;
+                    }
+    
+                    .female {
+                        background: #8d70f8;
+                    }
+                }
+    
+                .chart {
+                    position: relative;
+                    display: flex;
+    
+                    >.main {
+                        flex: 1;
+                    }
+    
+                    >.text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #33a4fa;
+                        font-size: calc(40 / 2420 * 100rem);
+                        text-shadow: 0 0 calc(20 / 2420 * 100rem) #33a4fa;
+                        font-weight: bold;
+                    }
+                }
+            }
+    
+            &-图2 {
+                width: calc(290 / 2420 * 100rem);
+                flex-shrink: 0;
+    
+                .legend {
+                    justify-content: flex-start;
+                }
+            }
+    
+            &-图3 {
+                border: 1px solid #08397d;
+    
+                h3 {
+                    font-size: calc(20 / 2420 * 100rem);
+                    color: #7ab6db;
+                    margin-top: calc(6 / 2420 * 100rem);
+                }
+            }
+    
+        }
+
+        .籍贯 {
+            height: calc(753 / 2420 * 100rem);
+            background: transparent;
+    
+            >.wrapper {
+                position: relative;
+                width: 100%;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .chart {
+                flex: 1;
+            }
+    
+            .notes {
+                position: absolute;
+                bottom: calc(10 / 2420 * 100rem);
+                right: calc(10 / 2420 * 100rem);
+            }
+        }
+
+        .战果,
+        .作案手段 {
+            padding: 0 calc(24 / 2420 * 100rem);
+
+            > table {
+                width: 100%;
+                table-layout: fixed;
+                margin-top: calc(25 / 2420 * 100rem);
+                border-collapse: collapse;
+
+                th,
+                td {
+                    border: 1px solid #1a3671;
+                }
+
+                thead {
+                    th {
+                        height: calc(70 / 2420 * 100rem);
+                        box-shadow: inset 0 0 calc(60 / 2420 * 100rem) 0 #1f3d85;
+                    }
+                }
+
+                tbody {
+                    td {
+                        height: calc(50 / 2420 * 100rem);
+                        width: calc(84 / 2420 * 100rem);
+                        background: #1c2456;
+                    }
+
+                }
+            }
+        }
+
+        .作案手段 {
+            > table {
+                tbody {
+                    td {
+                        height: calc(5 / 2420 * 100rem);
+                    }
+                }
+            }
+        }
+
+        .破获排名 {
+            height: calc(423 / 2420 * 100rem);
+        }
+    }  
+}

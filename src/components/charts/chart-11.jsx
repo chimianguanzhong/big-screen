@@ -7,6 +7,13 @@ export const Chart11 = () => {
     useEffect(() => {
         var myChart = echarts.init(divRef.current);
         myChart.setOption({
+            grid: {
+                x: 12,
+                x2: 20,
+                y: 20,
+                y2: 6,
+                containLabel: true
+            },
             color: colors,
             xAxis: {show: false},
             yAxis: {show: false},
@@ -18,7 +25,7 @@ export const Chart11 = () => {
                     radius: ['25%', '90%'],
                     avoidLabelOverlap: false,
                     label: {
-                        show: true, position: 'outside', textStyle: {color: 'white', fontSize: 20},
+                        show: true, position: 'outside', textStyle: {color: 'white', fontSize: 13},
                         distanceToLabelLine: 0,
                         formatter(options) {
                             return options.value * 100 + '%';
@@ -27,7 +34,7 @@ export const Chart11 = () => {
                     labelLine: {show: true, length: 0},
                     roseType: 'area',
                     itemStyle: {
-                        shadowBlur: 200,
+                        shadowBlur: 150,
                         shadowColor: 'rgba(0, 0, 0, 0.5)'
                     },
                     data: [

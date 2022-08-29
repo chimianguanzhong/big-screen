@@ -6,6 +6,13 @@ export const Chart10 = () => {
     useEffect(() => {
         var myChart = echarts.init(divRef.current);
         myChart.setOption({
+            grid: {
+                x: 12,
+                x2: 20,
+                y: 20,
+                y2: 6,
+                containLabel: true
+            },
             xAxis: {
                 data: ['入室抢劫', '当街偷盗', '团伙诈骗', '刑事案件', '民事案件'],
                 axisTick: {show: false},
@@ -21,7 +28,11 @@ export const Chart10 = () => {
                         } else {
                             return val;
                         }
-                    }
+                    },
+                    textStyle: {
+                        fontSize: 8,
+                        color: '#79839E'
+                    },
                 },
             },
 
@@ -30,6 +41,12 @@ export const Chart10 = () => {
                 axisLine: {
                     show: true,
                     lineStyle: {color: '#083B70'}
+                },
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 8,
+                        color: '#79839E'
+                    }, 
                 }
             },
             series: [{

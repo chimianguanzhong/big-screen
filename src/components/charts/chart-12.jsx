@@ -16,14 +16,23 @@ export const Chart12 = () => {
     useEffect(() => {
         var myChart = echarts.init(divRef.current);
         myChart.setOption({
+            grid: {
+                x: 15,
+                x2: 25,
+                y: 5,
+                y2: 5,
+                containLabel: true
+            },
             xAxis: {show: false},
             yAxis: {show: false},
-            grid: {x: 0, x2: 0, y: 0, y2: 0, containLabel: true},
             legend: {
                 orient: 'vertical',
                 left: 'left',
                 top: 'center',
-                textStyle: {color: 'white'},
+                textStyle: {
+                    color: 'white',
+                    fontSize: 8,
+                },
                 itemWidth: 10,
                 itemHeight: 10,
                 formatter(name) {

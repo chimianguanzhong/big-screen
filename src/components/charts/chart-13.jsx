@@ -17,6 +17,13 @@ export const Chart13 = () => {
     useEffect(() => {
         var myChart = echarts.init(divRef.current);
         myChart.setOption({
+            grid: {
+                x: 8,
+                x2: 18,
+                y: 20,
+                y2: 6,
+                containLabel: true
+            },
             xAxis: {
                 data: data.map(i => i.name),
                 axisTick: {show: false},
@@ -32,7 +39,11 @@ export const Chart13 = () => {
                         } else {
                             return val;
                         }
-                    }
+                    },
+                    textStyle: {
+                        fontSize: 8,
+                        color: '#79839E'
+                    },
                 },
             },
 
@@ -45,7 +56,11 @@ export const Chart13 = () => {
                 axisLabel: {
                     formatter(value) {
                         return (value * 100).toFixed(0) + '%';
-                    }
+                    },
+                    textStyle: {
+                        fontSize: 8,
+                        color: '#79839E'
+                    },
                 }
             },
             series: [{

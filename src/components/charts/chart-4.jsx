@@ -6,6 +6,13 @@ export const Chart4 = () => {
     useEffect(() => {
         var myChart = echarts.init(divRef.current);
         myChart.setOption({
+            grid: {
+                x: 12,
+                x2: 20,
+                y: 20,
+                y2: 6,
+                containLabel: true
+            },
             xAxis: {
                 type: 'category',
                 boundaryGap: false,
@@ -13,6 +20,11 @@ export const Chart4 = () => {
                 splitLine: {show: true, lineStyle: {color: '#073E78'}},
                 axisTick: {show: false},
                 axisLine: {show: false},
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 8,
+                    }, 
+                }
             },
             yAxis: {
                 type: 'value',
@@ -20,7 +32,10 @@ export const Chart4 = () => {
                 axisLabel: {
                     formatter(val) {
                         return val * 100 + '%';
-                    }
+                    },
+                    textStyle: {
+                        fontSize: 8,
+                    }, 
                 }
             },
             series: [{
@@ -33,8 +48,8 @@ export const Chart4 = () => {
                     0.15
                 ],
                 symbol: 'circle',
-                symbolSize: 12,
-                lineStyle: {width: 2},
+                symbolSize: 6,
+                lineStyle: {width: 1},
                 areaStyle: {
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                         offset: 0,
